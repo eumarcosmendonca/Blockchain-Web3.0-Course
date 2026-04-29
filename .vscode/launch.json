@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "attach",
+      "name": "Chrome: anexar (porta 9222)",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}/aula-1/frontend",
+      "urlFilter": "http://localhost:3000/*"
+    }
+  ]
+}

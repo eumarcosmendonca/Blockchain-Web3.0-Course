@@ -1,0 +1,79 @@
+{
+  "folders": [
+    {
+      "path": ".",
+    },
+  ],
+  "settings": {
+    // =========================
+    // FORMATAÇÃO GLOBAL
+    // =========================
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    // =========================
+    // PRETTIER CONFIG
+    // =========================
+    "prettier.printWidth": 100,
+    "prettier.tabWidth": 2,
+    "prettier.useTabs": false,
+    "prettier.semi": true,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "es5",
+    "prettier.arrowParens": "always",
+
+    // =========================
+    // SOLIDITY (Hardhat)
+    // =========================
+    "[solidity]": {
+      "editor.defaultFormatter": "NomicFoundation.hardhat-solidity",
+      "editor.formatOnSave": true,
+    },
+
+    // =========================
+    // JAVASCRIPT / TYPESCRIPT
+    // =========================
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+
+    // =========================
+    // HTML / CSS / JSON
+    // =========================
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+
+    // =========================
+    // ESLINT
+    // =========================
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+    },
+
+    // =========================
+    // UX / PRODUTIVIDADE
+    // =========================
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "files.autoSave": "off",
+    "editor.minimap.enabled": false,
+
+    // =========================
+    // HARDHAT / NODE
+    // =========================
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/cache": true,
+    },
+  },
+}
