@@ -1,0 +1,37 @@
+{
+  "name": "carechain",
+  "version": "1.0.0",
+  "description": "CareChain — Registro seguro e rastreabilidade de marca-passos na blockchain (Web 3.0). Projeto da disciplina Blockchain e Web 3.0 — UFAL/AL.",
+  "main": "backend/server.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "seed:local": "hardhat run scripts/seed.js --network localhost",
+    "backend": "node backend/server.js",
+    "frontend": "node frontend/serve.js"
+  },
+  "keywords": [
+    "blockchain",
+    "web3",
+    "solidity",
+    "marca-passo",
+    "saude",
+    "rastreabilidade",
+    "ufal"
+  ],
+  "author": "Gabriel Seixas — UFAL/AL",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.10"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "express": "^4.19.2"
+  }
+}

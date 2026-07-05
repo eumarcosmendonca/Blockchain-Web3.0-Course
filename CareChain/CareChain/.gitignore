@@ -1,0 +1,21 @@
+# Dependências
+node_modules/
+
+# Variáveis de ambiente (chaves privadas, RPC URLs) — NUNCA versionar
+.env
+
+# Artefatos de compilação do Hardhat
+artifacts/
+cache/
+typechain-types/
+
+# Endereço do contrato gerado no deploy (é recriado a cada deploy)
+deployments/localhost.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
