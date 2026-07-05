@@ -3,7 +3,7 @@
 **Registro seguro e rastreabilidade de marca-passos na blockchain (Web 3.0).**
 
 Projeto da disciplina eletiva **Blockchain e Web 3.0** — Ciência da Computação, UFAL/AL — Prof. **Leandro Sales**.
-Autor: **Gabriel Seixas**.
+Autor: **João Gabriel Seixas Santos e Marcos Mendonça**.
 
 ---
 
