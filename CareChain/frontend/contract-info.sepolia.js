@@ -1,7 +1,7 @@
 // GERADO AUTOMATICAMENTE pelo scripts/deploy.js — não editar à mão.
 window.CARECHAIN = {
   "rede": "sepolia",
-  "endereco": "0xAb9Bd0244Ad634A7efDe301c113f20B4cB96Dfa3",
+  "endereco": "0xAf5272b36BA141e4f7bB61DfaDF1D669D7a545C2",
   "admin": "0x34E976a7fC39a1b86B83F9E0f08f7687B1E4Bb6D",
   "taxaDeRegistro": "10000000000000000",
   "rpcUrl": "https://ethereum-sepolia-rpc.publicnode.com",

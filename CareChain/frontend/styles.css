@@ -836,6 +836,14 @@ td.mono,
   color: var(--texto-3);
   font-size: 13px;
 }
+#link-etherscan {
+  color: var(--azul-500);
+  text-decoration: none;
+  font-weight: 600;
+}
+#link-etherscan:hover {
+  text-decoration: underline;
+}
 
 /* ---------------- Responsivo ---------------- */
 @media (max-width: 900px) {

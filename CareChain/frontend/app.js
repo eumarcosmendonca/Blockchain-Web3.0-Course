@@ -217,8 +217,8 @@ function popularSelect(sel, mapa, rotuloTodos, formatar) {
 
 // ------------------------------------------------------- status da rede
 async function atualizarStatus() {
-  // Cria um provider só-leitura mesmo sem carteira conectada.
-  const p = provider || (window.ethereum ? new ethers.BrowserProvider(window.ethereum) : null);
+  // Cria um provider só-leitura mesmo sem carteira conectada (MetaMask ou RPC público).
+  const p = provider || providerLeitura();
   if (!p || !configOk()) return;
   const c = contrato || new ethers.Contract(window.CARECHAIN.endereco, window.CARECHAIN.abi, p);
 
@@ -393,9 +393,20 @@ function limparFiltros() {
   aplicarFiltrosRegistros();
 }
 
+// Provider só-leitura: usa o MetaMask se existir; senão, cai para o RPC público
+// gravado no contract-info.js — assim a demo hospedada funciona para QUALQUER
+// visitante, mesmo sem carteira instalada (as escritas continuam exigindo MetaMask).
+function providerLeitura() {
+  if (window.ethereum) return new ethers.BrowserProvider(window.ethereum);
+  if (window.CARECHAIN && window.CARECHAIN.rpcUrl)
+    return new ethers.JsonRpcProvider(window.CARECHAIN.rpcUrl);
+  return null;
+}
+
 function leituraSemCarteira() {
-  if (!window.ethereum || !configOk()) return null;
-  const p = new ethers.BrowserProvider(window.ethereum);
+  if (!configOk()) return null;
+  const p = providerLeitura();
+  if (!p) return null;
   return new ethers.Contract(window.CARECHAIN.endereco, window.CARECHAIN.abi, p);
 }
 
@@ -620,6 +631,14 @@ function init() {
 
   // por padrão, a administração fica bloqueada até um admin conectar
   definirAcessoAdmin(false);
+
+  // Se o contrato está numa rede pública (Sepolia), mostra o link de auditoria
+  // no rodapé — "não confie, verifique".
+  if (window.CARECHAIN && window.CARECHAIN.rede === "sepolia" && window.CARECHAIN.endereco) {
+    const link = $("#link-etherscan");
+    link.href = "https://sepolia.etherscan.io/address/" + window.CARECHAIN.endereco;
+    link.style.display = "inline";
+  }
   ligarAbas();
   ligarAdmin();
   ligarModal();

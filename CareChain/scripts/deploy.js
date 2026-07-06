@@ -36,6 +36,9 @@ async function main() {
     endereco: address,
     admin: deployer.address,
     taxaDeRegistro: taxaInicial.toString(),
+    // URL RPC pública da rede: permite ao dApp LER a blockchain mesmo sem
+    // MetaMask instalado (essencial para a demo hospedada na internet).
+    rpcUrl: network.config.url || "",
     abi: artifact.abi,
   };
 

@@ -1,5 +1,4 @@
-// GERADO AUTOMATICAMENTE pelo scripts/deploy.js — não editar à mão.
-window.CARECHAIN = {
+{
   "rede": "sepolia",
   "endereco": "0xAb9Bd0244Ad634A7efDe301c113f20B4cB96Dfa3",
   "admin": "0x34E976a7fC39a1b86B83F9E0f08f7687B1E4Bb6D",
@@ -751,4 +750,4 @@ window.CARECHAIN = {
       "type": "receive"
     }
   ]
-};
+}
